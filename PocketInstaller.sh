@@ -12,13 +12,13 @@ if hash zenity 2>/dev/null; then
   :
 else
   sudo apt-get update
-  sudo apt-get install -y zenity
+  sudo apt-get install zenity
 fi
 if hash jq 2>/dev/null; then
   :
 else
  sudo apt-get update
- sudo apt-get install -y jq
+ sudo apt-get install jq
 fi
 if hash yad 2>/dev/null; then
   :
@@ -28,7 +28,7 @@ else
   sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
   echo "#key added" | sudo tee -a /etc/apt/sources.list
   sudo apt-get update
-  sudo apt-get install -y yad
+  sudo apt-get install yad
 fi
 if grep -Fxq "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" /etc/apt/sources.list && grep -Fxq "#key added" /etc/apt/sources.list; then
   :
